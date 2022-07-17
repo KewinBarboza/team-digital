@@ -2,7 +2,7 @@
   "name": "team-digital",
   "version": "0.0.1",
   "private": true,
-  "homepage": "https://teamdigital.dev",
+  "homepage": "http://kewinbarboza.github.io/team-digital/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
