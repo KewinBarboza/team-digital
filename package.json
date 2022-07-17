@@ -2,9 +2,9 @@
   "name": "team-digital",
   "version": "0.0.1",
   "private": true,
-  "homepage": "http://kewinbarboza.github.io/team-digital/",
+  "homepage": "http://teamdigital.dev",
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && echo teamdigital.dev > ./dist/CNAME",
     "deploy": "gh-pages -d dist",
     "dev": "astro dev",
     "start": "astro dev",
