@@ -1,0 +1,83 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Card from "../components/Card.astro"
+import logo from "/images/logo.png"
+---
+
+<Layout title="Bienvinido a team digital.">
+  <main>
+    <img src={logo} alt="logo" title="logo digital team" width="215">
+    <h1>Bienvenido estamos<span class="text-gradient"> Trabajando</span></h1>
+    <p class="instructions">
+      Estamos Trabajando en construir una plataforma que nos permita ofrecer todos nuestros <strong>productos y
+        servicios</strong> a nuestros clientes.
+    </p>
+    <ul role="list" class="link-card-grid">
+      <Card href="mailto:dev.teamdigital@gmail.com" title="Correo"
+        body="Contáctanos a través de nuestro correo electrónico para más información de nuestros servicios" />
+    </ul>
+  </main>
+</Layout>
+
+<style>
+  :root {
+    --astro-gradient: linear-gradient(0deg, #FFCB77, #17C3B2);
+  }
+
+  img {
+    margin: 0 auto;
+    display: block;
+    width: 215px;
+  }
+
+  h1 {
+    margin: 2rem 0;
+    font-size: 46px;
+    text-align: center;
+  }
+
+  main {
+    margin: auto;
+    padding: 1em;
+    max-width: 60ch;
+  }
+
+  .text-gradient {
+    font-weight: 900;
+    background-image: var(--astro-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100% 200%;
+    background-position-y: 100%;
+    border-radius: 0.4rem;
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+
+    0%,
+    100% {
+      background-position-y: 0%;
+    }
+
+    50% {
+      background-position-y: 80%;
+    }
+  }
+
+  .instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    background: #17C3B2;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    color: var(--color-bg);
+  }
+
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1rem;
+    padding: 0;
+  }
+</style>
