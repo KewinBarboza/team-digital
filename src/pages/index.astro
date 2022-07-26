@@ -2,20 +2,80 @@
 import Layout from "../layouts/Layout.astro"
 import Card from "../components/Card.astro"
 import logo from "/images/logo.png"
+import imgHero from "/images/hero.webp"
+
+const CREAMOS = [
+  {
+    title: "Desarrollo Web",
+    description: "Es el trabajo que permite que una web tenga una apariencia impecable, un funcionamiento rápido y un buen desempeño para permitir la mejor experiencia de usuario.",
+    image: "/images/dev-web.png",
+  },
+  {
+    title: "Aplicaciones Móviles",
+    description: "Aplicación diseñada para ser ejecutada en teléfonos inteligentes, tabletas y otros dispositivos móviles. Este tipo de aplicaciones permiten al usuario efectuar un variado conjunto de tareas.",
+    image: "/images/dev-movil.png",
+  }
+]
+
+const SERVICIOS = [
+  { nombre: 'Soporte técnico', image: '/images/soporte.png' },
+  { nombre: 'Consultoría', image: '/images/consultoria.png' },
+  { nombre: 'Diseño de paginas web', image: '/images/des-web.png' },
+  { nombre: 'Aplicaciones web', image: '/images/dev-movil.png' },
+  { nombre: 'Desarrollo de API ', image: '/images/dev-web.png' },
+  { nombre: 'Aplicaciones móvil', image: '/images/dev-movil.png' },
+  { nombre: 'Accesoria en hosting y dominios', image: '/images/hosting-dominios.png' },
+]
 ---
 
-<Layout title="Bienvinido a team digital.">
-  <main>
-    <img src={logo} alt="logo" title="logo digital team" width="215">
-    <h1>Bienvenido estamos<span class="text-gradient"> Trabajando</span></h1>
-    <p class="instructions">
-      Estamos Trabajando en construir una plataforma que nos permita ofrecer todos nuestros <strong>productos y
-        servicios</strong> a nuestros clientes.
-    </p>
-    <ul role="list" class="link-card-grid">
-      <Card href="mailto:dev.teamdigital@gmail.com" title="Correo"
-        body="Contáctanos a través de nuestro correo electrónico para más información de nuestros servicios" />
-    </ul>
+<Layout title="Bienvinido a team digital">
+  <section class="w-full bg-no-repeat bg-cover h-[640px]" style={`background-image:url(${imgHero});`}>
+    <div class="relative top-0 left-0 p-3 mx-28 h-full">
+      <div class="w-2/4 h-full flex justify-center flex-col items-start">
+        <h1 class="text-left font-bold text-3xl">La mejor experiencia para tus clientes y empresa</h1>
+        <p class="">
+          Creamos desde cero software personalizado para tu empresa o negocio y puedas alcanzar tus
+          objetivos tecnológicos empresariales
+        </p>
+        <a href="#" class="bg-orange-300 px-5 py-4 rounded-lg text-white font-bold mt-5">Contáctanos</a>
+      </div>
+    </div>
+  </section>
+  <main class="mx-28">
+    <section class="my-28">
+      <h2 class="text-center text-4xl">¿ Que podemos crear por ti ?</h2>
+      <p class="text-center mb-10">Creamos aplicaciones web y móvil</p>
+
+      <div class="grid grid-cols-2 grid-flow-col gap-4">
+        {
+        CREAMOS.map(({title, description, image}) => (
+        <div class="flex flex-col items-center bg-[#bcfdf74b] rounded-lg border shadow-md md:flex-row md:max-w-xl">
+          <img class="object-cover w-full h-96 p-3 md:h-auto md:w-48" src={image} alt="" />
+          <div class="flex flex-col justify-between p-4 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{title}</h5>
+            <p class="mb-3 font-normal text-gray-700">{description}</p>
+          </div>
+        </div>
+        ))
+        }
+      </div>
+    </section>
+    <section class="my-28">
+      <h2 class="text-center text-4xl mb-10">Servicios</h2>
+
+      <div class="grid grid-cols-4 gap-4">
+        {
+        SERVICIOS.map(({nombre, image}) => (
+        <div class="max-w-sm bg-white rounded-lg border border-[#FFCB77] shadow-md">
+          <div class="flex flex-col items-center pb-10">
+            <img class="my-3" src={image} alt="" />
+            <h5 class="mb-1 text-lg text-center font-medium text-gray-900">{nombre}</h5>
+          </div>
+        </div>
+        ))
+        }
+      </div>
+    </section>
   </main>
 </Layout>
 
@@ -24,23 +84,17 @@ import logo from "/images/logo.png"
     --astro-gradient: linear-gradient(0deg, #FFCB77, #17C3B2);
   }
 
-  img {
-    margin: 0 auto;
-    display: block;
-    width: 215px;
-  }
-
   h1 {
     margin: 2rem 0;
     font-size: 46px;
-    text-align: center;
+    /* text-align: center; */
   }
 
-  main {
+  /* main {
     margin: auto;
     padding: 1em;
     max-width: 60ch;
-  }
+  } */
 
   .text-gradient {
     font-weight: 900;
