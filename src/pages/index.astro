@@ -3,7 +3,8 @@ import Layout from "../layouts/Layout.astro"
 import Card from "../components/Card.astro"
 import logo from "/images/logo.png"
 import imgHero from "/images/hero.webp"
-
+import imgFooter from "/images/herofooter.webp"
+import contacto from "/images/contacto.png"
 const CREAMOS = [
   {
     title: "Desarrollo Web",
@@ -76,7 +77,51 @@ const SERVICIOS = [
         }
       </div>
     </section>
+    <section class="my-28">
+      <div
+        class="w-full bg-[#17C3B2] h-72 rounded-[50px] px-10 py-44 text-center flex flex-col items-center justify-center">
+        <p class="text-4xl mb-4 text-white font-extrabold">Metodo de trabajo</p>
+        <p class="text-white mb-6 text-2xl w-2/4">
+          Crea junto con nosotros el software que lleve la experiencia de tus clientes y empleados a otro nivel
+        </p>
+        <a href="#" class="bg-orange-300 px-5 py-4 rounded-lg text-center text-white font-bold">Como trabajamos</a>
+      </div>
+    </section>
   </main>
+  <footer class="bg-no-repeat bg-cover h-[540px]" style={`background-image: url(${imgFooter});`}>
+    <div class="relative top-0 left-0 p-3 mx-28 h-full">
+      <div class="h-full flex justify-between items-center">
+        <div class="">
+          <h1 class="text-left font-bold text-3xl">Contáctenos en cualquier momento</h1>
+          <p class="mb-3">
+            Nos puedes escribir para preguntar por tu solicitud en cualquiera de nuestras redes sociales.
+          </p>
+          <a href="#"
+            class="inline-flex items-center text-white bg-[#FFCB77] hover:bg-orange-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-6 py-3.5 text-center">Contáctanos</a>
+        </div>
+        <img src={contacto} class="h-2/4" alt="">
+      </div>
+    </div>
+    <div class="mx-28 h-36">
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com/"
+          class="hover:underline">Flowbite™</a>. All Rights Reserved.
+      </span>
+      <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+        <li>
+          <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+        </li>
+        <li>
+          <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
+        </li>
+        <li>
+          <a href="#" class="hover:underline">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
 </Layout>
 
 <style>
