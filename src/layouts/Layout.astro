@@ -1,4 +1,6 @@
 ---
+import tailwidn from "../style/global.css";
+
 export interface Props {
   title: string;
 }
@@ -13,6 +15,7 @@ const { title } = Astro.props as Props
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
   <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+  <link rel="stylesheet" href={tailwidn} />
   <title>{title}</title>
 </head>
 
@@ -21,6 +24,7 @@ const { title } = Astro.props as Props
 </body>
 
 </html>
+
 <style>
   :root {
     --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
@@ -29,27 +33,12 @@ const { title } = Astro.props as Props
 
     --color-text: hsl(12, 5%, 4%);
     --color-bg: #fff;
-    /* --color-bg: hsl(10, 21%, 95%); */
     --color-border: hsl(17, 24%, 90%);
   }
 
   html {
-    font-family: system-ui, sans-serif;
     font-size: var(--font-size-base);
     color: var(--color-text);
     background-color: var(--color-bg);
-  }
-
-  :global(h1) {
-    font-size: var(--font-size-xl);
-  }
-
-  :global(h2) {
-    font-size: var(--font-size-lg);
-  }
-
-  :global(code) {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-      Bitstream Vera Sans Mono, Courier New, monospace;
   }
 </style>

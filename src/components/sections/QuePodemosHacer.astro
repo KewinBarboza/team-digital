@@ -1,0 +1,36 @@
+---
+import Section from "./../Section.astro"
+import Title from "../Title.astro"
+
+const CREAMOS = [
+  {
+    title: "Desarrollo Web",
+    description: "Es el trabajo que permite que una web tenga una apariencia impecable, un funcionamiento rápido y un buen desempeño para permitir la mejor experiencia de usuario.",
+    image: "/images/dev-web.png",
+  },
+  {
+    title: "Aplicaciones Móviles",
+    description: "Aplicación diseñada para ser ejecutada en teléfonos inteligentes, tabletas y otros dispositivos móviles. Este tipo de aplicaciones permiten al usuario efectuar un variado conjunto de tareas.",
+    image: "/images/dev-movil.png",
+  }
+]
+---
+
+<Section>
+  <Title textAlign="text-center">¿ Que podemos crear por ti ?</Title>
+  <p class="text-center mb-10 text-lg">Creamos aplicaciones web y móvil</p>
+
+  <div class="grid grid-cols-2 grid-flow-col gap-4">
+    {
+    CREAMOS.map(({title, description, image}) => (
+    <div class="flex flex-col items-center bg-[#bcfdf74b] rounded-lg border shadow-md md:flex-row md:max-w-xl">
+      <img class="object-cover w-full h-96 p-3 md:h-auto md:w-48" src={image} alt="" />
+      <div class="flex flex-col justify-between p-4 leading-normal">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#227C9D]">{title}</h5>
+        <p class="mb-3 font-normal text-gray-700">{description}</p>
+      </div>
+    </div>
+    ))
+    }
+  </div>
+</Section>

@@ -1,0 +1,56 @@
+---
+import imgHero from "/images/frame_3.svg"
+---
+
+<section class="w-full bg-no-repeat bg-cover h-[640px]" style={`background-image:url(${imgHero});`}>
+  <div class="relative top-0 left-0 p-3 mx-52 h-full">
+    <div class="w-2/4 h-full flex justify-center flex-col items-start">
+      <h1 class="text-left font-extrabold text-5xl font-baloo text-gradient">La mejor experiencia para tus
+        clientes y empresa</h1>
+      <p class="my-3">
+        Creamos desde cero software personalizado para tu empresa o negocio y puedas alcanzar tus
+        objetivos tecnológicos empresariales
+      </p>
+      <a href="#"
+        class="inline-flex items-center text-white bg-[#FFCB77] hover:bg-orange-300 focus:ring-4 focus:outline-none focus:ring-orange-200 font-medium rounded-lg text-base px-6 py-3.5 text-center">Contáctanos</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  :root {
+    --astro-gradient: linear-gradient(0deg, #FFCB77, #17C3B2);
+  }
+
+  .text-gradient {
+    font-weight: 900;
+    background-image: var(--astro-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100% 200%;
+    background-position-y: 100%;
+    border-radius: 0.4rem;
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+
+    0%,
+    100% {
+      background-position-y: 0%;
+    }
+
+    50% {
+      background-position-y: 80%;
+    }
+  }
+
+  .instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    background: #17C3B2;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    color: var(--color-bg);
+  }
+</style>

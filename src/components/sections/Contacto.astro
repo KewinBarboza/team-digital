@@ -1,0 +1,25 @@
+---
+import imgFooter from "/images/herofooter.svg"
+import contacto from "/images/chat.png"
+import RedesSociales from "../RedesSociales.astro"
+import Title from "../Title.astro";
+---
+
+<section class="bg-no-repeat bg-cover h-[540px]" style={`background-image: url(${imgFooter});`}>
+  <div class="relative top-0 left-0 p-3 mx-52 h-full">
+    <div class="h-full flex justify-between items-center">
+      <div class="">
+        <Title textAlign="text-left">Contáctenos en cualquier momento</Title>
+        <p class="mb-9 text-xl">
+          Nos puedes escribir para preguntar por tu solicitud en <br> cualquiera de nuestras redes sociales.
+        </p>
+        <a href="#"
+          class="inline-flex items-center text-white bg-[#FFCB77] hover:bg-orange-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-6 py-3.5 text-center">Contáctanos</a>
+        <div class="mt-9">
+          <RedesSociales color="#17C3B2" />
+        </div>
+      </div>
+      <img src={contacto} width="256" alt="">
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+---
+import RedesSociales from "../RedesSociales.astro";
+import logoX2 from "/images/logox2.png"
+
+const yaer = new Date().getFullYear()
+---
+
+<footer class="mx-52 h-36">
+  <img src={logoX2} width="150" class="my-3" alt="">
+  <div class="flex items-center justify-between">
+    <ul class="flex flex-wrap items-center mt-7 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+      <li>
+        <a href="#" class="mr-4 hover:underline md:mr-6 ">Sobre nosotros</a>
+      </li>
+      <li>
+        <a href="#" class="mr-4 hover:underline md:mr-6">Contactanos</a>
+      </li>
+      <li>
+        <a href="#" class="mr-4 hover:underline md:mr-6">Metodo de trabajo</a>
+      </li>
+    </ul>
+    <RedesSociales />
+  </div>
+  <p class="mb-0 mt-3 text-sm text-gray-500 text-center"><small class="">© {yaer} Team Gigital C.A</small></p>
+  <p class="mb-0 text-sm text-gray-500 text-center"><small class="">RIF J-0000000</small></p>
+</footer>
