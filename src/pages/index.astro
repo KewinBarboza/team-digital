@@ -6,9 +6,11 @@ import MetodoDeTrabajo from "../components/sections/MetodoDeTrabajo.astro"
 import Header from "../components/sections/Header.astro"
 import Contacto from "../components/sections/Contacto.astro"
 import Footer from "../components/sections/Footer.astro"
+import Navbar from "../components/Navbar.astro"
 ---
 
 <Layout title="Team Digital">
+  <Navbar />
   <Header />
   <main class="md:mx-52 mx-1">
     <QuePodemosHacer />
@@ -18,3 +20,12 @@ import Footer from "../components/sections/Footer.astro"
   <Contacto />
   <Footer />
 </Layout>
+
+<script>
+  const btn = document.querySelector("button.mobile-menu-button");
+  const menu = document.querySelector(".mobile-menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
