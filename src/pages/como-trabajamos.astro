@@ -1,0 +1,72 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Section from "../components/Section.astro"
+import Title from "../components/Title.astro"
+
+const PASOS = [
+  {
+    title: '1 - Planificación',
+    description: 'Empezar con ciertas tareas que influirán decisivamente en el éxito del mismo',
+    image: ''
+  },
+
+  {
+    title: '2 - Análisis',
+    description: 'Averiguar qué es exactamente lo que tiene que hacer el software',
+    image: ''
+  },
+
+  {
+    title: '3 - Diseño',
+    description: 'En esta fase se estudian posibles opciones de diseño para el software',
+    image: ''
+  },
+
+  {
+    title: '4 - Implementación',
+    description: 'elegir las herramientas adecuadas, un entorno de desarrollo que facilite el trabajo y un lenguaje de programación apropiado para el tipo de software a construir.',
+    image: ''
+  },
+
+  {
+    title: '5 - Pruebas',
+    description: 'la fase de pruebas del ciclo de vida del software busca detectar los fallos cometidos en las etapas anteriores para corregirlos.',
+    image: ''
+  },
+
+  {
+    title: '6 - Instalación o despliegue',
+    description: 'poner el software en funcionamiento.',
+    image: ''
+  },
+
+  {
+    title: '7 - Uso y mantenimiento',
+    description: 'Esta es una de las fases más importantes del ciclo de vida de desarrollo del software. Puesto que el software ni se rompe ni se desgasta con el uso.',
+    image: ''
+  },
+]
+---
+
+<Layout title="Como trabajamos">
+  <main class="md:mx-52 mx-1">
+    <Section>
+      <Title textAlign="text-center">¿ Como trabajamos ?</Title>
+      <p class="text-center mb-10 text-lg">
+        Diseñamos y desarrollamos software con características increíbles para que disfrutes y aproveches al máximo el
+        mundo tecnológico.
+      </p>
+
+      {
+      PASOS.map(({title, description}) => (
+      <div class="rounded-lg border-[#FFCB77] p-10 border-4 mb-9 shadow-lg">
+        <p class="font-baloo font-bold text-[#4098b8] text-3xl">{title}</p>
+        <p class="text-gray-700 ml-9">
+          {description}
+        </p>
+      </div>
+      ))
+      }
+    </Section>
+  </main>
+</Layout>

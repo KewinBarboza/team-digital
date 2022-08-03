@@ -1,3 +1,7 @@
-<section class="md:my-28 my-14">
+---
+const { id } = Astro.props
+---
+
+<section class="md:my-28 my-14" id={id}>
   <slot />
 </section>
