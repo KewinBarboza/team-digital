@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home7/teamdigi/public_html/
-    - /bin/cp ejemplo.txt $DEPLOYPATH
+    - /bin/cp -R / $DEPLOYPATH
